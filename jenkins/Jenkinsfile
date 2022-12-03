@@ -16,6 +16,7 @@ pipeline {
                 id
                 docker ps
                 echo "worspace: ${WORKSPACE}"
+                mkdir "${WORKSPACE}"/targer
                 touch "${WORKSPACE}"/targer/test.jar
                 '''
             }
