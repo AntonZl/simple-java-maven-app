@@ -1,6 +1,15 @@
 pipeline {
     agent any
     stages {
+        stage('Info') {
+            steps {
+                sh '''
+                whoami
+                id
+                docker ps
+                '''
+            }
+        }
         stage('Build') {
             agent {
                 docker { image 'maven:3.8.1-adoptopenjdk-11' }
