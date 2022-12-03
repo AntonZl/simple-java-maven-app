@@ -16,8 +16,8 @@ pipeline {
                 id
                 docker ps
                 echo "worspace: ${WORKSPACE}"
-//                 rm -rf "${WORKSPACE}"/target && mkdir "${WORKSPACE}"/target
-//                 touch "${WORKSPACE}"/target/test.jar
+                #rm -rf "${WORKSPACE}"/target && mkdir "${WORKSPACE}"/target
+                #touch "${WORKSPACE}"/target/test.jar
                 '''
             }
         }
