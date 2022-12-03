@@ -51,7 +51,9 @@ pipeline {
             
             steps {
                 sh '''
-                docker build -t "$registry:$BUILD_NUMBER" -f jenkins/Dockerfile
+                docker build -t "$registry:$BUILD_NUMBER" jenkins/.
+                echo "Listing all images:"
+                docker images
                 '''
             }
         }
