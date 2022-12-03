@@ -48,7 +48,7 @@ pipeline {
 //         }
         stage('Build Docker image') {
             agent any
-            }
+            
             steps {
                 sh '''
                 docker build -t $registry+ ":$BUILD_NUMBER" -f jenkins/Dockerfile
