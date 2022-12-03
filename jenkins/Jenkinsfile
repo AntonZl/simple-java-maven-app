@@ -16,23 +16,23 @@ pipeline {
                 id
                 docker ps
                 echo "worspace: ${WORKSPACE}"
-                ls "${WORKSPACE}"
+                touch ${WORKSPACE}"/targer/test.jar
                 '''
             }
         }
-        stage('Build') {
-            agent {
-                docker { image 'maven:3.8.1-adoptopenjdk-11' }
-            }
-            steps {
-                sh 'mvn -B -DskipTests clean package'
-            }
-            post {
-              success {
-                archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
-              }
-            }
-        }
+//         stage('Build') {
+//             agent {
+//                 docker { image 'maven:3.8.1-adoptopenjdk-11' }
+//             }
+//             steps {
+//                 sh 'mvn -B -DskipTests clean package'
+//             }
+//             post {
+//               success {
+//                 archiveArtifacts artifacts: 'target/*.jar', fingerprint: true
+//               }
+//             }
+//         }
 //         stage('Test') {
 //             agent {
 //                 docker { image 'maven:3.8.1-adoptopenjdk-11' }
