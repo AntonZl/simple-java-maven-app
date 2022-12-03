@@ -1,8 +1,8 @@
 FROM openjdk:8-jre-alpine
-
+ARG WORKSPACE
 RUN mkdir /app
 
-RUN echo "${WORKSPACE}"
+RUN echo ${WORKSPACE}
 
 #COPY "${WORKSPACE}"/targer/*.jar /app/app.jar
 
