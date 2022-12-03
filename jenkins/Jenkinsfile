@@ -52,7 +52,7 @@ pipeline {
             
             steps {
                 sh '''
-                docker build -t "$registry:$BUILD_NUMBER" jenkins/.
+                docker build -t "$registry:$BUILD_NUMBER" --build-arg WORKSPACE="${WORKSPACE}" jenkins/.
                 echo "Listing all images:"
                 docker images
                 '''
