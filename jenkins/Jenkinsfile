@@ -4,6 +4,7 @@ pipeline {
         stage('Info') {
             steps {
                 sh '''
+                echo "Displaying some info about the agent"
                 whoami
                 id
                 docker ps
