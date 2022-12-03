@@ -16,7 +16,7 @@ pipeline {
                 id
                 docker ps
                 echo "worspace: ${WORKSPACE}"
-                touch ${WORKSPACE}"/targer/test.jar
+                touch "${WORKSPACE}"/targer/test.jar
                 '''
             }
         }
