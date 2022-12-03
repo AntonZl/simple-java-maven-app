@@ -8,8 +8,8 @@ pipeline {
                 whoami
                 id
                 docker ps
-                echo "worspace: ${WORKSAPCE}"
-                ls "${WORKSAPCE}"
+                echo "worspace: ${WORKSPACE}"
+                ls "${WORKSPACE}"
                 '''
             }
         }
