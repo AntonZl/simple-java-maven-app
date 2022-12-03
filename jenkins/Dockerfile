@@ -2,7 +2,11 @@ FROM openjdk:8-jre-alpine
 ARG WORKSPACE
 RUN mkdir /app
 
-RUN echo ${WORKSPACE}
+RUN echo $WORKSPACE
+RUN ls $WORKSPACE
+
+RUN echo **********************
+RUN ls /var/jenkins_home/workspace/maven-pipeline
 
 #COPY "${WORKSPACE}"/targer/*.jar /app/app.jar
 
