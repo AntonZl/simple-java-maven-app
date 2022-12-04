@@ -63,12 +63,9 @@ pipeline {
 //             }
 //         }
         stage('Build Docker image') {
-//             agent {                
-//                 docker {
-//                     image 'toncheto/jenkins-agent-git-docker:3'
-//                     args '-v /var/run/docker.sock:/var/run/docker.sock'
-//                 }
-//             }             
+            agent {
+                docker { image 'docker:20.10.21-alpine3.17' }            
+            }          
             
             steps {
                 sh '''
