@@ -1,11 +1,11 @@
 pipeline {
-//     agent any
-    agent {                
-        docker {
-            image 'toncheto/jenkins-agent-git-docker:3'
-            args '-v /var/run/docker.sock:/var/run/docker.sock'
-            }
-        }            
+    agent any
+//     agent {                
+//         docker {
+//             image 'toncheto/jenkins-agent-git-docker:3'
+//             args '-v /var/run/docker.sock:/var/run/docker.sock'
+//             }
+//         }            
     
     environment{
         registry= "toncheto/javaapp"
