@@ -48,7 +48,9 @@ pipeline {
 //             }
 //         }
         stage('Build Docker image') {
-            agent any
+            agent {
+                docker { image 'docker:20.10.21-alpine3.17' }            
+            }
             
             steps {
                 sh '''
