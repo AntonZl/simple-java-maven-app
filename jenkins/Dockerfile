@@ -7,7 +7,7 @@ RUN echo "Hostname: $(hostname)"
 
 
 RUN echo "This is the WORKSPACE path: $WORKSPACE"
-ADD ../targer/*.jar /app/app.jar
+ADD ../target/*.jar /app/app.jar
 
 #COPY "${WORKSPACE}"/targer/*.jar /app/app.jar
 
