@@ -7,16 +7,14 @@ pipeline {
         
     }
     
-    stages {
+    stages {           
+        stage('Info') {
         agent {                
             docker {
                 image 'toncheto/jenkins-agent-git-docker:3'
                 args '-v /var/run/docker.sock:/var/run/docker.sock'
             }
-        }   
-            
-        stage('Info') {
-            
+        }               
             steps {
                 sh '''
                 echo "Displaying some info about the agent"
