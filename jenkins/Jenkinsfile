@@ -72,7 +72,7 @@ pipeline {
             
             steps {
                 sh '''
-                docker build -t "$registry:$BUILD_NUMBER" --build-arg WORKSPACE="${WORKSPACE}" .
+                docker build -t "$registry:$BUILD_NUMBER" --build-arg WORKSPACE="${WORKSPACE}" ../.
                 echo "Listing all images:"
                 docker images
                 '''
